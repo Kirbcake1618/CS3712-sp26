@@ -6,6 +6,10 @@ function hexEncode(input) {
     } catch (e) {
         return "Incorrect input, please try again";
     }
+
+    if(value > 2147483647) {
+        return "Input too large! Try a smaller value";
+    }
     let hexValue = "";
     let tempVal;
     let tempStr = "";
